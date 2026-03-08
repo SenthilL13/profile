@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senthil Nayagan — LinkedIn Profile</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07080f;
+      --s1: #0d1018;
+      --s2: #121620;
+      --card: #141824;
+      --border: #1c2236;
+      --border2: #252d45;
+      --li: #0a66c2;
+      --li-light: #60a5fa;
+      --li-soft: rgba(10, 102, 194, 0.12);
+      --li-glow: rgba(10, 102, 194, 0.28);
+      --green: #4ade80;
+      --green-soft: rgba(74, 222, 128, 0.1);
+      --amber: #fbbf24;
+      --coral: #f87171;
+      --purple: #a78bfa;
+      --text: #e8edf8;
+      --text2: #8090b8;
+      --muted: #4a5570;
+      --dim: #2e3650;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 15%, rgba(10, 102, 194, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 85% 85%, rgba(10, 102, 194, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── BACK NAV ── */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(7, 8, 15, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border2);
+      background: var(--s2);
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--li-light);
+      border-color: var(--li-glow);
+    }
+
+    .nav-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    .nav-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--li-soft);
+      border: 1px solid rgba(10, 102, 194, 0.3);
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--li-light);
+    }
+
+    /* ── HERO BANNER ── */
+    .hero-banner {
+      height: 160px;
+      background: linear-gradient(120deg, #050d1f 0%, #091a38 40%, #050f28 70%, #0a1220 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(10, 102, 194, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 102, 194, 0.06) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    .banner-glow {
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: 400px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(10, 102, 194, 0.25) 0%, transparent 70%);
+    }
+
+    .banner-glow2 {
+      position: absolute;
+      bottom: -40px;
+      right: 80px;
+      width: 300px;
+      height: 200px;
+      background: radial-gradient(ellipse, rgba(96, 165, 250, 0.12) 0%, transparent 70%);
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.15);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* ── PROFILE AREA ── */
+    .profile-area {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .avatar-wrap {
+      margin-top: -56px;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0d2a4e, #0a66c2, #38bdf8);
+      border: 4px solid var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.4), 0 8px 40px rgba(10, 102, 194, 0.3);
+    }
+
+    .profile-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .profile-tagline {
+      font-size: 16px;
+      color: var(--text2);
+      margin-bottom: 6px;
+    }
+
+    .profile-location {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .profile-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .plink {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      text-decoration: none;
+      border: 1px solid;
+      transition: all 0.2s;
+      color: var(--li-light);
+      border-color: rgba(10, 102, 194, 0.35);
+      background: var(--li-soft);
+    }
+
+    .plink:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.2);
+    }
+
+    /* ── SECTIONS ── */
+    .content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    .sec {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      margin-bottom: 24px;
+      overflow: hidden;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .sec:nth-child(1) {
+      animation-delay: .05s
+    }
+
+    .sec:nth-child(2) {
+      animation-delay: .1s
+    }
+
+    .sec:nth-child(3) {
+      animation-delay: .15s
+    }
+
+    .sec:nth-child(4) {
+      animation-delay: .2s
+    }
+
+    .sec:nth-child(5) {
+      animation-delay: .25s
+    }
+
+    .sec:nth-child(6) {
+      animation-delay: .3s
+    }
+
+    .sec:nth-child(7) {
+      animation-delay: .35s
+    }
+
+    .sec-head {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.015);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sec-ico {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .ic-li {
+      background: var(--li-soft);
+    }
+
+    .ic-g {
+      background: var(--green-soft);
+    }
+
+    .ic-a {
+      background: rgba(251, 191, 36, 0.1);
+    }
+
+    .ic-p {
+      background: rgba(167, 139, 250, 0.1);
+    }
+
+    .sec-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .sec-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .sec-body {
+      padding: 28px;
+    }
+
+    /* field label */
+    .fl {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .fl::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .field {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    /* Headline display */
+    .headline-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hl-item {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.2s;
+    }
+
+    .hl-item:hover {
+      border-color: rgba(10, 102, 194, 0.35);
+    }
+
+    .hl-item.best {
+      border-color: rgba(10, 102, 194, 0.45);
+      background: rgba(10, 102, 194, 0.06);
+      position: relative;
+    }
+
+    .best-tag {
+      position: absolute;
+      top: -9px;
+      right: 16px;
+      background: var(--li);
+      color: white;
+      font-family: 'Fira Code', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      border-radius: 4px;
+    }
+
+    .hl-n {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+      flex-shrink: 0;
+    }
+
+    .best .hl-n {
+      background: var(--li);
+      color: white;
+    }
+
+    .hl-text {
+      font-size: 15px;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .hl-chars {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* About text */
+    .about-block {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 24px;
+      white-space: pre-line;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* Experience */
+    .exp-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--card);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .exp-body {
+      flex: 1;
+    }
+
+    .exp-role {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .exp-co {
+      font-size: 13px;
+      color: var(--li-light);
+      margin-bottom: 2px;
+    }
+
+    .exp-date {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .exp-bullets li {
+      font-size: 14px;
+      line-height: 1.65;
+      padding-left: 20px;
+      position: relative;
+      color: var(--text2);
+    }
+
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--li-light);
+    }
+
+    .exp-bullets li strong {
+      color: var(--text);
+    }
+
+    /* Skills grid */
+    .skills-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .skill-group-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .skills-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      border: 1px solid var(--border2);
+      background: var(--s2);
+      color: var(--text);
+      transition: all 0.2s;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+    }
+
+    .skill-tag:hover {
+      border-color: rgba(10, 102, 194, 0.4);
+      color: var(--li-light);
+    }
+
+    .skill-tag.pin {
+      background: rgba(10, 102, 194, 0.12);
+      border-color: rgba(10, 102, 194, 0.35);
+      color: var(--li-light);
+    }
+
+    .skill-tag.miss {
+      background: rgba(251, 191, 36, 0.06);
+      border-color: rgba(251, 191, 36, 0.25);
+      color: var(--amber);
+    }
+
+    /* Featured items */
+    .feat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .feat-item {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .feat-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--li-soft);
+      border: 1px solid rgba(10, 102, 194, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      color: var(--li-light);
+      flex-shrink: 0;
+    }
+
+    .feat-body h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .feat-body p {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    /* Content calendar */
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .cal-card {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .cal-day {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      color: var(--li-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .cal-type {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .cal-eg {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    /* URL cards */
+    .url-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .url-card {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+    }
+
+    .url-pre {
+      color: var(--muted);
+    }
+
+    .url-slug {
+      color: var(--li-light);
+      font-weight: 600;
+    }
+
+    .url-badge {
+      margin-left: auto;
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge-bad {
+      background: rgba(248, 113, 113, 0.1);
+      border: 1px solid rgba(248, 113, 113, 0.25);
+      color: var(--coral);
+    }
+
+    .badge-good {
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.25);
+      color: var(--green);
+    }
+
+    /* Rec templates */
+    .rec-msg {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      white-space: pre-line;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--text2);
+    }
+
+    .rec-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .rec-msg strong {
+      color: var(--text);
+    }
+
+    /* Action steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      align-items: flex-start;
+    }
+
+    .step-n {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--li);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .step-c h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .step-c p {
+      font-size: 13px;
+      color: var(--text2);
+    }
+
+    /* Photo tips */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media(max-width:580px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .photo-card {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .photo-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .tip-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .tip-list li {
+      display: flex;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.55;
+    }
+
+    footer-page {
+      display: block;
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border2);
+      border-radius: 2px;
+    }
+
+    @media(max-width:640px) {
+
+      .profile-area,
+      .content {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .sec-body {
+        padding: 18px;
+      }
+
+      .topnav {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPNAV -->
+  <nav class="topnav">
+    <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+    <span class="nav-title">LinkedIn Profile</span>
+    <div class="nav-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </svg>
+      linkedin.com/in/senthilnayagan
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <div class="hero-banner">
+    <div class="banner-grid"></div>
+    <div class="banner-glow"></div>
+    <div class="banner-glow2"></div>
+    <div class="banner-text">Full Stack Developer · Python · React · Django · Node.js · Open to Product Roles</div>
+  </div>
+
+  <!-- PROFILE INFO -->
+  <div class="profile-area">
+    <div class="avatar-wrap">
+      <div class="avatar">SN</div>
+    </div>
+    <h1 class="profile-name">Senthil Nayagan</h1>
+    <p class="profile-tagline">Full Stack Developer · Python · Django · React · Node.js · 33+ GitHub Projects</p>
+    <p class="profile-location">📍 Coimbatore, Tamil Nadu · Open to Bengaluru, Chennai, Hyderabad, Remote</p>
+    <div class="profile-links">
+      <a href="https://www.linkedin.com/in/senthil-nayagan-976b58277/" target="_blank" class="plink">🔗 View on
+        LinkedIn</a>
+      <a href="https://github.com/SenthilL13" target="_blank" class="plink">⬡ GitHub</a>
+      <a href="https://senthilh5.netlify.app/" target="_blank" class="plink">🌐 Portfolio</a>
+      <a href="mailto:senthilnayagan100@gmail.com" class="plink">✉️ Email</a>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- 1. HEADLINE -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-li">✏️</div>
+        <div>
+          <div class="sec-title">Headline</div>
+          <div class="sec-sub">220 character max · Most keyword-weighted field on LinkedIn</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field">
+          <div class="fl">3 Options — Best Pick Highlighted</div>
+          <div class="headline-showcase">
+            <div class="hl-item best">
+              <div class="best-tag">⭐ BEST</div>
+              <div class="hl-n">1</div>
+              <div>
+                <div class="hl-text">Full Stack Developer | Python · Django · React · Node.js | 33+ GitHub Projects |
+                  Seeking Product-Based Roles 🚀</div>
+                <div class="hl-chars">108 chars · Keywords: Full Stack, Python, Django, React, Node.js · Social proof:
+                  33+ Projects · Intent: Product-Based</div>
+              </div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-n">2</div>
+              <div>
+                <div class="hl-text">Building Full-Stack Apps with Python, React & Node.js | AI/ML Enthusiast | 1.5 Yrs
+                  in Production Systems | Open to Opportunities</div>
+                <div class="hl-chars">128 chars · Story-driven · Good for startup / product companies</div>
+              </div>
+            </div>
+            <div class="hl-item">
+              <div class="hl-n">3</div>
+              <div>
+                <div class="hl-text">Python · Django · React Developer | REST APIs · Docker · TensorFlow | 11
+                  Certifications | Full Stack Roles in Bengaluru/Chennai/Remote</div>
+                <div class="hl-chars">138 chars · Keyword-dense · Mentions target cities · Best for ATS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. ABOUT -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-li">📝</div>
+        <div>
+          <div class="sec-title">About Section</div>
+          <div class="sec-sub">2,600 character max · First-person · Hook in 3 lines</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="about-block">I build things end-to-end — from database schema to deployed UI — and I care deeply
+          about what happens in production.
+
+          Currently working as an Associate Support Engineer at Techorc Software Solutions, I'm embedded in production
+          systems every day: resolving 50+ incidents/month, optimizing databases across 10+ client environments, and
+          writing Python automation that saves my team 8+ hours per week. This isn't theory — it's real systems, real
+          pressure, and real impact.
+
+          🛠 My Stack:
+          → Backend: Python, Django, FastAPI, Flask, Node.js, REST APIs
+          → Frontend: React.js, Next.js, HTML5, CSS3, Bootstrap
+          → Databases: MySQL, PostgreSQL, MongoDB, MariaDB, SQLite
+          → AI/ML: TensorFlow, PyTorch, OpenCV, NLP
+          → DevOps: Docker, Git, Linux, Firebase, Netlify
+
+          🚀 Selected Projects (33+ on GitHub):
+          • GPS Vehicle Tracking System — React + Firebase, sub-2s latency, 20+ vehicles live
+          • Road Vehicle Analysis — OpenCV + TensorFlow, 92%+ accuracy at 30 FPS
+          • Hate Speech NLP Classifier — PyTorch, 89% F1-score, 100+ API req/min
+          • Student Study Portal — Django + MySQL/MongoDB, served 100+ users
+
+          🏅 Certified by:
+          Anthropic · IBM · Meta · University of Michigan · DeepLearning.AI · freeCodeCamp · GitHub
+
+          What I'm looking for:
+          A product-based company where I can own features, write code that ships, and grow into a senior full-stack or
+          backend engineering role.
+
+          📧 senthilnayagan100@gmail.com
+          🌐 senthilh5.netlify.app
+          💻 github.com/SenthilL13</div>
+      </div>
+    </div>
+
+    <!-- 3. PHOTO & BANNER -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-li">🖼️</div>
+        <div>
+          <div class="sec-title">Photo & Banner</div>
+          <div class="sec-sub">First visual impression — decisions made in 3 seconds</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field">
+          <div class="fl">Photo Tips</div>
+          <div class="photo-grid">
+            <div class="photo-card">
+              <div class="photo-title">📸 Profile Photo Tips</div>
+              <ul class="tip-list">
+                <li><span>💡</span><span><strong>Lighting:</strong> Shoot beside a window — soft natural side-lighting,
+                    face fully lit, no harsh shadows.</span></li>
+                <li><span>🎽</span><span><strong>Clothing:</strong> Solid-colour smart casual — navy, white, or grey. No
+                    patterns, logos, or very casual tees.</span></li>
+                <li><span>😊</span><span><strong>Expression:</strong> Genuine smile, eyes at camera, relaxed confidence
+                    — not a stiff passport photo.</span></li>
+                <li><span>🖼️</span><span><strong>Background:</strong> Clean white wall, light grey, or blurred outdoor.
+                    Face should fill 60% of frame.</span></li>
+              </ul>
+            </div>
+            <div class="photo-card">
+              <div class="photo-title">🎨 Banner Design Guide</div>
+              <ul class="tip-list">
+                <li><span>✅</span><span>Use <strong>Canva</strong> — search "LinkedIn Banner" → dark tech-themed
+                    template.</span></li>
+                <li><span>🖥️</span><span>Show tech stack logo row: Python · React · Django · Node.js · Docker</span>
+                </li>
+                <li><span>💬</span><span>Add a strong one-line tagline (see below).</span></li>
+                <li><span>🔗</span><span>Include GitHub & portfolio URL in small text at bottom.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="fl">Banner Tagline Text</div>
+          <div class="about-block" style="font-size:16px;line-height:1.5;">Full Stack Developer
+            Python · Django · React · Node.js · Docker
+
+            Building scalable web apps & AI systems · 33+ Projects · github.com/SenthilL13</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. EXPERIENCE -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-a">💼</div>
+        <div>
+          <div class="sec-title">Experience</div>
+          <div class="sec-sub">Results-first bullets · Numbers over vague claims</div>
+        </div>
+      </div>
+      <div class="sec-body">
+
+        <div class="exp-item">
+          <div class="exp-logo">🏢</div>
+          <div class="exp-body">
+            <div class="exp-role">Associate Support Engineer</div>
+            <div class="exp-co">Techorc Software Solutions</div>
+            <div class="exp-date">Oct 2024 – Present · Coimbatore, TN · Full-time</div>
+            <ul class="exp-bullets">
+              <li>Resolved <strong>50+ technical incidents/month</strong> across 10+ client production environments,
+                achieving average SLA resolution under <strong>24 hours</strong>.</li>
+              <li>Cut average DB query response time by <strong>25%</strong> across MySQL, PostgreSQL & MariaDB through
+                indexing, query rewrites, and schema optimization.</li>
+              <li>Built Python automation scripts saving <strong>8+ engineering hours/week</strong> and cutting manual
+                error rate by ~90%.</li>
+              <li>Authored <strong>20+ technical documents</strong> — API guides, runbooks, issue trackers — reducing
+                new engineer onboarding time by ~30%.</li>
+              <li>Improved average service uptime by <strong>15%</strong> by identifying bottlenecks via log analysis
+                and diagnostic tools.</li>
+              <li>Coordinated cross-team ticket delivery maintaining <strong>sub-24-hour resolution SLA</strong> across
+                all client accounts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-logo">📡</div>
+          <div class="exp-body">
+            <div class="exp-role">Engineering Intern — Next Generation Data Networking</div>
+            <div class="exp-co">Bharat Sanchar Nigam Limited (BSNL)</div>
+            <div class="exp-date">Jul 2022 – Aug 2022 · Coimbatore, TN · Internship</div>
+            <ul class="exp-bullets">
+              <li>Trained on Next Generation Data Networking at BSNL — India's national telecom serving <strong>100M+
+                  users</strong> — gaining hands-on exposure to enterprise network architecture.</li>
+              <li>Produced <strong>3 structured engineering reports</strong> on network configurations & protocol
+                performance, demonstrating systems analysis and documentation skills.</li>
+              <li>Certified in Next Generation Data Networking by BSNL upon completion.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. SKILLS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-g">🛠️</div>
+        <div>
+          <div class="sec-title">Skills & Endorsements</div>
+          <div class="sec-sub">Pin top 3 · Add all 20 · Request endorsements from colleagues</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field">
+          <div class="fl">Top 3 — Pin These First</div>
+          <div class="skills-flow">
+            <span class="skill-tag pin">Python</span>
+            <span class="skill-tag pin">React.js</span>
+            <span class="skill-tag pin">Django</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="fl">All Skills to Add</div>
+          <div class="skills-wrap">
+            <div>
+              <div class="skill-group-title">Backend</div>
+              <div class="skills-flow">
+                <span class="skill-tag pin">Python</span><span class="skill-tag pin">Django</span><span
+                  class="skill-tag">Node.js</span>
+                <span class="skill-tag">FastAPI</span><span class="skill-tag">Flask</span><span class="skill-tag">REST
+                  API</span>
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <div class="skill-group-title">Frontend</div>
+              <div class="skills-flow">
+                <span class="skill-tag pin">React.js</span><span class="skill-tag">Next.js</span><span
+                  class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML5 / CSS3</span><span class="skill-tag">Bootstrap</span>
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <div class="skill-group-title">Databases & DevOps</div>
+              <div class="skills-flow">
+                <span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span><span
+                  class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Docker</span><span class="skill-tag">Git & GitHub</span><span
+                  class="skill-tag">Linux</span>
+                <span class="skill-tag">Firebase</span>
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <div class="skill-group-title">AI / ML</div>
+              <div class="skills-flow">
+                <span class="skill-tag">TensorFlow</span><span class="skill-tag">PyTorch</span><span
+                  class="skill-tag">OpenCV</span>
+                <span class="skill-tag">NLP</span>
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <div class="skill-group-title">Add These — High Demand in JDs</div>
+              <div class="skills-flow">
+                <span class="skill-tag miss">Redux</span><span class="skill-tag miss">AWS / GCP</span>
+                <span class="skill-tag miss">CI/CD</span><span class="skill-tag miss">GraphQL</span>
+                <span class="skill-tag miss">Agile / Scrum</span><span class="skill-tag miss">Unit Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. FEATURED -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-p">📌</div>
+        <div>
+          <div class="sec-title">Featured Section</div>
+          <div class="sec-sub">First thing after About — make it a portfolio showcase</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="feat-list">
+          <div class="feat-item">
+            <div class="feat-num">1</div>
+            <div class="feat-body">
+              <h4>🌐 Portfolio — senthilport.netlify.app</h4>
+              <p>Pin as a Link. Title: "Full Stack Developer Portfolio". Description: "33+ projects spanning web apps,
+                AI/ML systems, GPS tracking & NLP classifiers — all live on GitHub." This is Pin #1 — every recruiter
+                who visits should see this first.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-num">2</div>
+            <div class="feat-body">
+              <h4>💻 GitHub — github.com/SenthilL13</h4>
+              <p>Pin as a Link. Title: "33+ GitHub Repositories — Web, AI, Mobile & More". Shows you're an active
+                builder. Signals the scale and depth of your work beyond a resume.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-num">3</div>
+            <div class="feat-body">
+              <h4>📄 Resume PDF — Upload Directly</h4>
+              <p>Upload Senthil_NewResume.pdf as Media. Title: "Senthil Nayagan — Full Stack Developer Resume".
+                Recruiters on mobile can read it without downloading.</p>
+            </div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-num">4</div>
+            <div class="feat-body">
+              <h4>🏅 Top Certification — Anthropic Claude Code</h4>
+              <p>Screenshot your Anthropic or Meta cert → upload as Media. Certs from Anthropic, Meta & DeepLearning.AI
+                make you stand out from other freshers immediately.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 8. RECOMMENDATIONS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-g">⭐</div>
+        <div>
+          <div class="sec-title">Recommendation Request Templates</div>
+          <div class="sec-sub">Send to Manager, Colleague & Academic Mentor</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field">
+          <div class="fl">To Your Manager at Techorc</div>
+          <div class="rec-label">LinkedIn Message Template</div>
+          <div class="rec-msg">Hi,
+
+            I hope you're doing well! I've been working on making my LinkedIn profile stronger as I explore new
+            opportunities, and I'd be truly grateful if you could write me a short recommendation.
+
+            Even 3–4 sentences about your experience working with me — specifically around how I handled technical
+            incidents, the Python automation work, or the database optimizations — would make a huge difference.
+
+            I'm happy to write a draft for you to edit if that makes it easier.
+
+            Warm regards,
+            Senthil</div>
+        </div>
+        <div class="field">
+          <div class="fl">To a Dev Colleague</div>
+          <div class="rec-label">LinkedIn Message Template</div>
+          <div class="rec-msg">Hey,
+
+            Quick favour — I'm updating my LinkedIn as I start looking for full stack developer roles, and a
+            recommendation from a teammate would mean a lot.
+
+            Anything about how we worked together on [specific task] or my technical approach to problem-solving would
+            be perfect. Just 2–4 sentences is enough.
+
+            Let me know if you'd like me to write a draft. Happy to return the favour too!
+
+            Thanks,
+            Senthil</div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div><!-- /content -->
+  <footer-page>Senthil Nayagan · LinkedIn Profile · <a href="../index.html"
+      style="color:var(--li-light);text-decoration:none;">← Back to Portfolio Hub</a></footer-page>
+</body>
+
+</html>

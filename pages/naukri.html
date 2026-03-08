@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senthil Nayagan — Naukri Profile</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #09090e;
+      --s1: #0f1018;
+      --s2: #141520;
+      --card: #131420;
+      --border: #1e1f30;
+      --border2: #282940;
+      --nk: #ff7555;
+      --nk2: #e85e3c;
+      --nk-soft: rgba(255, 117, 85, 0.1);
+      --nk-glow: rgba(255, 117, 85, 0.25);
+      --gold: #f5c842;
+      --gold-soft: rgba(245, 200, 66, 0.1);
+      --green: #4ade80;
+      --green-soft: rgba(74, 222, 128, 0.1);
+      --coral: #f87171;
+      --blue: #60a5fa;
+      --text: #eaeaf5;
+      --text2: #7880a0;
+      --muted: #404560;
+      --dim: #282a40;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 15% 10%, rgba(255, 117, 85, 0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 85% 90%, rgba(245, 200, 66, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* NAV */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(9, 9, 14, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border2);
+      background: var(--s1);
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--nk);
+      border-color: var(--nk-glow);
+    }
+
+    .nav-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--nk-soft);
+      border: 1px solid rgba(255, 117, 85, 0.3);
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--nk);
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(160deg, #09090e 0%, #180e08 50%, #09090e 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 40px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 117, 85, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 117, 85, 0.03) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -80px;
+      left: -60px;
+      width: 440px;
+      height: 340px;
+      background: radial-gradient(ellipse, rgba(255, 117, 85, 0.1) 0%, transparent 70%);
+    }
+
+    .hero-glow2 {
+      position: absolute;
+      bottom: -60px;
+      right: 80px;
+      width: 320px;
+      height: 240px;
+      background: radial-gradient(ellipse, rgba(245, 200, 66, 0.07) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2a1208, var(--nk2), var(--gold));
+      border: 3px solid rgba(255, 117, 85, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 0 40px rgba(255, 117, 85, 0.25);
+      flex-shrink: 0;
+    }
+
+    .hero-info {
+      flex: 1;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #ffffff, #ffa080);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-role {
+      font-size: 15px;
+      color: var(--text2);
+      margin-bottom: 6px;
+    }
+
+    .hero-role span {
+      color: var(--nk);
+      font-weight: 600;
+    }
+
+    .hero-loc {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hlink {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      text-decoration: none;
+      border: 1px solid;
+      transition: all 0.2s;
+      color: var(--nk);
+      border-color: rgba(255, 117, 85, 0.35);
+      background: var(--nk-soft);
+    }
+
+    .hlink:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.2);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--s1);
+      width: fit-content;
+    }
+
+    .hs {
+      padding: 14px 24px;
+      border-right: 1px solid var(--border2);
+      text-align: center;
+    }
+
+    .hs:last-child {
+      border-right: none;
+    }
+
+    .hs-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--nk);
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .hs-l {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* MAIN */
+    .main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sec {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      margin-bottom: 24px;
+      overflow: hidden;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .sec:nth-child(1) {
+      animation-delay: .05s
+    }
+
+    .sec:nth-child(2) {
+      animation-delay: .1s
+    }
+
+    .sec:nth-child(3) {
+      animation-delay: .15s
+    }
+
+    .sec:nth-child(4) {
+      animation-delay: .2s
+    }
+
+    .sec:nth-child(5) {
+      animation-delay: .25s
+    }
+
+    .sec:nth-child(6) {
+      animation-delay: .3s
+    }
+
+    .sec:nth-child(7) {
+      animation-delay: .35s
+    }
+
+    .sec:nth-child(8) {
+      animation-delay: .4s
+    }
+
+    .sec-head {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.012);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sec-ico {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .ic-nk {
+      background: var(--nk-soft);
+    }
+
+    .ic-g {
+      background: var(--green-soft);
+    }
+
+    .ic-gold {
+      background: var(--gold-soft);
+    }
+
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .sec-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .sec-body {
+      padding: 28px;
+    }
+
+    .fl {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .fl span {
+      color: var(--nk);
+    }
+
+    .fl::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .field {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    /* Headline cards */
+    .hl-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hl-item {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .hl-item:hover {
+      border-color: rgba(255, 117, 85, 0.3);
+    }
+
+    .hl-item.best {
+      border-color: rgba(255, 117, 85, 0.45);
+      background: rgba(255, 117, 85, 0.05);
+    }
+
+    .best-tag {
+      position: absolute;
+      top: -9px;
+      right: 16px;
+      background: var(--nk);
+      color: white;
+      font-family: 'Fira Code', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      border-radius: 4px;
+    }
+
+    .hl-n {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+      flex-shrink: 0;
+    }
+
+    .best .hl-n {
+      background: var(--nk);
+      color: white;
+    }
+
+    .hl-text {
+      font-size: 15px;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .hl-chars {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Summary */
+    .summary-block {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 24px;
+      white-space: pre-line;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* Key fields */
+    .fields-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media(max-width:560px) {
+      .fields-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .fcard {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .fc-lbl {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .fc-val {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    /* Experience */
+    .exp-item {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--card);
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .exp-body {
+      flex: 1;
+    }
+
+    .exp-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .exp-co {
+      font-size: 13px;
+      color: var(--nk);
+      margin-bottom: 2px;
+    }
+
+    .exp-date {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .exp-bullets li {
+      font-size: 14px;
+      line-height: 1.65;
+      padding-left: 20px;
+      position: relative;
+      color: var(--text2);
+    }
+
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--nk);
+    }
+
+    .exp-bullets li strong {
+      color: var(--text);
+    }
+
+    /* Projects */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media(max-width:580px) {
+      .proj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .proj-card {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s;
+    }
+
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--nk), var(--gold));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .proj-card:hover {
+      border-color: rgba(255, 117, 85, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .proj-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .proj-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .proj-stack {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--nk);
+      margin-bottom: 8px;
+    }
+
+    .proj-desc {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .proj-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .metric {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      color: var(--green);
+      border-color: rgba(74, 222, 128, 0.25);
+    }
+
+    /* Skills */
+    .skill-section {
+      margin-bottom: 20px;
+    }
+
+    .skill-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group-lbl {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .skills-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stag {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      border: 1px solid var(--border2);
+      background: var(--s2);
+      color: var(--text);
+      font-family: 'Fira Code', monospace;
+      transition: all 0.2s;
+    }
+
+    .stag:hover {
+      border-color: rgba(255, 117, 85, 0.4);
+      color: var(--nk);
+    }
+
+    .stag.pin {
+      background: var(--nk-soft);
+      border-color: rgba(255, 117, 85, 0.35);
+      color: var(--nk);
+    }
+
+    .stag.add {
+      background: var(--gold-soft);
+      border-color: rgba(245, 200, 66, 0.3);
+      color: var(--gold);
+    }
+
+    /* Certs */
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cert-item {
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+
+    .cert-item:hover {
+      border-color: rgba(255, 117, 85, 0.3);
+    }
+
+    .cert-ico {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .cert-n {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .cert-b {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--text2);
+    }
+
+    /* Steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--s2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+
+    .step:hover {
+      border-color: rgba(255, 117, 85, 0.3);
+    }
+
+    .step-n {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--nk2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .step-c h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .step-c p {
+      font-size: 13px;
+      color: var(--text2);
+    }
+
+    footer-page {
+      display: block;
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border2);
+      border-radius: 2px;
+    }
+
+    @media(max-width:640px) {
+      .hero {
+        padding: 32px 16px 28px;
+      }
+
+      .hero-top {
+        flex-direction: column;
+      }
+
+      .main {
+        padding: 24px 14px 60px;
+      }
+
+      .sec-body {
+        padding: 18px;
+      }
+
+      .topnav {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPNAV -->
+  <nav class="topnav">
+    <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+    <span style="font-family:'Fira Code',monospace;font-size:12px;color:var(--muted);">Naukri Profile</span>
+    <div class="nav-badge">💼 naukri.com</div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="avatar">SN</div>
+        <div class="hero-info">
+          <h1 class="hero-name">Senthil Nayagan</h1>
+          <p class="hero-role"><span>Full Stack Developer</span> · Associate Support Engineer</p>
+          <p class="hero-loc">📍 Coimbatore, Tamil Nadu · Open to Bengaluru, Chennai, Hyderabad, Remote</p>
+          <div class="hero-links">
+            <a href="https://github.com/SenthilL13" target="_blank" class="hlink">⬡ github.com/SenthilL13</a>
+            <a href="https://senthilh5.netlify.app/" target="_blank" class="hlink">🌐 Portfolio</a>
+            <a href="mailto:senthilnayagan100@gmail.com" class="hlink">✉️ Email</a>
+            <a href="tel:+919345222105" class="hlink">📞 +91 9345222105</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hs">
+          <div class="hs-n">1.5yr</div>
+          <div class="hs-l">Experience</div>
+        </div>
+        <div class="hs">
+          <div class="hs-n">33+</div>
+          <div class="hs-l">GitHub Repos</div>
+        </div>
+        <div class="hs">
+          <div class="hs-n">11</div>
+          <div class="hs-l">Certifications</div>
+        </div>
+        <div class="hs">
+          <div class="hs-n">6</div>
+          <div class="hs-l">Key Projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- 1. HEADLINE -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-nk">✏️</div>
+        <div>
+          <div class="sec-title">Headline (Profile Title)</div>
+          <div class="sec-sub">The first thing recruiters see — keyword-optimised for Naukri search</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="fl"><span>#</span> 3 Options — Best Highlighted</div>
+        <div class="hl-list">
+          <div class="hl-item best">
+            <div class="best-tag">⭐ BEST</div>
+            <div class="hl-n">1</div>
+            <div>
+              <div class="hl-text">Full Stack Developer | Python, Django, React, Node.js | 33+ GitHub Projects | Seeking
+                Product-Based Roles</div>
+              <div class="hl-chars">98 chars · All major keywords · Social proof · Clear intent</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <div class="hl-n">2</div>
+            <div>
+              <div class="hl-text">Full Stack Developer (Python + React) | REST APIs, Docker, AI/ML | 1.5 Yrs Experience
+                | Open to New Opportunities</div>
+              <div class="hl-chars">112 chars · Good for ATS · Signals openness · Broader reach</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <div class="hl-n">3</div>
+            <div>
+              <div class="hl-text">Python | Django | React Developer | Backend Optimization | AI/ML Projects | Looking
+                for Full Stack Roles</div>
+              <div class="hl-chars">102 chars · Keyword-dense · Best for pure search visibility</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. PROFILE SUMMARY -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-nk">📝</div>
+        <div>
+          <div class="sec-title">Profile Summary</div>
+          <div class="sec-sub">Story-driven · Numbers-first · CTA at end</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="summary-block">Full Stack Developer who builds things end-to-end — from database schema to deployed
+          UI.
+
+          I currently work as an Associate Support Engineer at Techorc Software Solutions, where I'm hands-on with
+          production systems every single day. I've resolved 50+ technical incidents per month, cut database query times
+          by 25% through indexing and schema tuning, and automated repetitive workflows with Python scripts that save 8+
+          hours per week. Real systems. Real impact.
+
+          My tech stack spans the full spectrum:
+          → Backend: Python, Django, FastAPI, Flask, Node.js, REST APIs
+          → Frontend: React.js, Next.js, HTML5, CSS3, Bootstrap
+          → Databases: MySQL, PostgreSQL, MongoDB, MariaDB, SQLite
+          → AI/ML: TensorFlow, PyTorch, OpenCV, NLP
+          → DevOps: Docker, Git, Linux, Firebase, Netlify
+
+          Beyond my job, I've built 33+ projects on GitHub — ranging from a GPS vehicle tracking platform (React +
+          Firebase, monitoring 20+ vehicles in real time) to an NLP hate speech classifier (89% F1-score, 100+ API
+          requests/min) to a computer vision traffic analysis system (92%+ detection accuracy at 30 FPS).
+
+          I hold certifications from Anthropic, IBM, Meta, University of Michigan, DeepLearning.AI, and freeCodeCamp.
+
+          What I'm looking for: A product-based company where I can contribute to meaningful software, grow into a
+          senior full-stack or backend role, and work with a team that values clean code and real ownership.
+
+          📧 senthilnayagan100@gmail.com
+          🔗 github.com/SenthilL13
+          🌐 senthilh5.netlify.app</div>
+      </div>
+    </div>
+
+    <!-- 3. KEY FIELDS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-nk">🎯</div>
+        <div>
+          <div class="sec-title">Key Profile Fields</div>
+          <div class="sec-sub">These fields directly affect Naukri search ranking — fill every one</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="fields-grid">
+          <div class="fcard">
+            <div class="fc-lbl">Current Role</div>
+            <div class="fc-val">Associate Support Engineer at Techorc Software Solutions</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Total Experience</div>
+            <div class="fc-val">1 Year 6 Months</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Current Location</div>
+            <div class="fc-val">Coimbatore, Tamil Nadu</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Preferred Locations</div>
+            <div class="fc-val">Bengaluru, Chennai, Hyderabad, Pune, Remote</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Notice Period</div>
+            <div class="fc-val">30 Days (or as applicable)</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Industry</div>
+            <div class="fc-val">IT Software – Application Programming / Maintenance</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Functional Area</div>
+            <div class="fc-val">Engineering – Software & QA</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Role Category</div>
+            <div class="fc-val">Full Stack Developer / Software Developer</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Desired Role</div>
+            <div class="fc-val">Full Stack Developer / Python Developer / Backend Developer</div>
+          </div>
+          <div class="fcard">
+            <div class="fc-lbl">Employment Type</div>
+            <div class="fc-val">Full Time, Permanent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. EXPERIENCE -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-gold">💼</div>
+        <div>
+          <div class="sec-title">Experience</div>
+          <div class="sec-sub">Results-first bullets · Every number earns its place</div>
+        </div>
+      </div>
+      <div class="sec-body">
+
+        <div class="exp-item">
+          <div class="exp-logo">🏢</div>
+          <div class="exp-body">
+            <div class="exp-role">Associate Support Engineer</div>
+            <div class="exp-co">Techorc Software Solutions</div>
+            <div class="exp-date">Oct 2024 – Present · Coimbatore, Tamil Nadu · Full-time</div>
+            <ul class="exp-bullets">
+              <li>Resolved <strong>50+ technical incidents per month</strong> across 10+ client production environments
+                with average SLA resolution under <strong>24 hours</strong>.</li>
+              <li>Optimized MySQL, PostgreSQL & MariaDB databases through indexing & schema tuning — reducing query
+                response time by <strong>25%</strong>.</li>
+              <li>Built Python automation scripts eliminating manual workflows, saving <strong>8+ engineering
+                  hours/week</strong> and cutting error rate by ~90%.</li>
+              <li>Improved average service uptime by <strong>15%</strong> by identifying critical bottlenecks via log
+                analysis and diagnostic tools.</li>
+              <li>Authored <strong>20+ technical documents</strong> (API guides, runbooks, issue trackers) reducing new
+                engineer onboarding time by ~30%.</li>
+              <li>Coordinated cross-team ticket delivery, achieving <strong>sub-24-hour resolution SLA</strong> across
+                all client accounts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-logo">📡</div>
+          <div class="exp-body">
+            <div class="exp-role">Engineering Intern — Next Generation Data Networking</div>
+            <div class="exp-co">Bharat Sanchar Nigam Limited (BSNL)</div>
+            <div class="exp-date">Jul 2022 – Aug 2022 · Coimbatore, Tamil Nadu · Internship</div>
+            <ul class="exp-bullets">
+              <li>Trained on Next Generation Data Networking at BSNL — India's national telecom serving <strong>100M+
+                  users</strong> — gaining deep exposure to enterprise network architecture.</li>
+              <li>Produced <strong>3 structured engineering reports</strong> on network configurations & protocol
+                performance.</li>
+              <li>Certified in Next Generation Data Networking by BSNL upon completion.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. PROJECTS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-nk">🚀</div>
+        <div>
+          <div class="sec-title">Projects</div>
+          <div class="sec-sub">4 best projects — add in Naukri Projects section</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="proj-grid">
+
+          <div class="proj-card">
+            <div class="proj-title">🛰️ GPS Tracking System</div>
+            <div class="proj-stack">React.js, Next.js, Node.js, Firebase, Maps API · 2024–Present</div>
+            <div class="proj-desc">Real-time GPS vehicle tracking platform with sub-2-second location update latency,
+              route history logging, and a fleet management dashboard.</div>
+            <div class="proj-metrics">
+              <span class="metric">&lt;2s latency</span>
+              <span class="metric">20+ vehicles</span>
+              <span class="metric">40% faster UI</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-title">🚗 Road Vehicle Analysis</div>
+            <div class="proj-stack">Python, OpenCV, TensorFlow, Data Analytics · 2023</div>
+            <div class="proj-desc">Computer vision pipeline for real-time multi-class vehicle detection, speed
+              estimation & traffic classification from live video feeds.</div>
+            <div class="proj-metrics">
+              <span class="metric">92%+ accuracy</span>
+              <span class="metric">30 FPS</span>
+              <span class="metric">5+ classes</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-title">💬 Hate Speech NLP Model</div>
+            <div class="proj-stack">Python, PyTorch, NLP, Flask REST API · 2023</div>
+            <div class="proj-desc">Multi-headed PyTorch classifier for hate speech detection across 3 social media
+              categories, exposed via Flask REST API.</div>
+            <div class="proj-metrics">
+              <span class="metric">89% F1-score</span>
+              <span class="metric">100+ req/min</span>
+              <span class="metric">3 categories</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-title">🎓 Student Study Portal</div>
+            <div class="proj-stack">Python, Django, MySQL, MongoDB, JavaScript · 2023</div>
+            <div class="proj-desc">3 production-ready versions of an academic management platform. RBAC, MVC
+              architecture, MySQL to MongoDB migration.</div>
+            <div class="proj-metrics">
+              <span class="metric">100+ users</span>
+              <span class="metric">3 versions</span>
+              <span class="metric">30% faster queries</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. SKILLS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-g">🛠️</div>
+        <div>
+          <div class="sec-title">Skills</div>
+          <div class="sec-sub">Top 3 pinned · All 20 added · High-demand skills to add</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field">
+          <div class="fl"><span>#</span> Top 3 — Pin These</div>
+          <div class="skills-flow">
+            <span class="stag pin">Python</span>
+            <span class="stag pin">React.js</span>
+            <span class="stag pin">Django</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="fl"><span>#</span> All Skills to Add</div>
+          <div class="skill-section">
+            <div class="skill-group-lbl">Backend</div>
+            <div class="skills-flow">
+              <span class="stag pin">Python</span><span class="stag pin">Django</span><span class="stag">Node.js</span>
+              <span class="stag">FastAPI</span><span class="stag">Flask</span><span class="stag">REST API</span>
+            </div>
+          </div>
+          <div class="skill-section">
+            <div class="skill-group-lbl">Frontend</div>
+            <div class="skills-flow">
+              <span class="stag pin">React.js</span><span class="stag">Next.js</span><span
+                class="stag">JavaScript</span>
+              <span class="stag">HTML5</span><span class="stag">CSS3</span>
+            </div>
+          </div>
+          <div class="skill-section">
+            <div class="skill-group-lbl">Databases & DevOps</div>
+            <div class="skills-flow">
+              <span class="stag">MySQL</span><span class="stag">PostgreSQL</span><span class="stag">MongoDB</span>
+              <span class="stag">Docker</span><span class="stag">Git</span><span class="stag">Linux</span><span
+                class="stag">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-section">
+            <div class="skill-group-lbl">AI / ML</div>
+            <div class="skills-flow">
+              <span class="stag">TensorFlow</span><span class="stag">PyTorch</span><span class="stag">OpenCV</span><span
+                class="stag">NLP</span>
+            </div>
+          </div>
+          <div class="skill-section">
+            <div class="skill-group-lbl">High Demand — Add These</div>
+            <div class="skills-flow">
+              <span class="stag add">Redux</span><span class="stag add">AWS / GCP</span><span
+                class="stag add">CI/CD</span>
+              <span class="stag add">GraphQL</span><span class="stag add">Agile / Scrum</span><span
+                class="stag add">Unit Testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. CERTIFICATIONS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-gold">🏅</div>
+        <div>
+          <div class="sec-title">Certifications</div>
+          <div class="sec-sub">11 certs · Add each as separate Naukri certification entry</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="cert-list">
+          <div class="cert-item">
+            <div class="cert-ico">🤖</div>
+            <div>
+              <div class="cert-n">Claude Code in Action</div>
+              <div class="cert-b">Anthropic · AI-assisted development, prompt engineering, agentic coding</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🐍</div>
+            <div>
+              <div class="cert-n">Python for Everybody Specialization</div>
+              <div class="cert-b">University of Michigan / Coursera · Python, data structures, databases</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">⚛️</div>
+            <div>
+              <div class="cert-n">React & Front-End Development</div>
+              <div class="cert-b">Meta / Coursera · React.js, hooks, state, component architecture</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🌐</div>
+            <div>
+              <div class="cert-n">Django Application Development with SQL</div>
+              <div class="cert-b">IBM / Coursera · Full stack Django, ORM, REST APIs</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🧠</div>
+            <div>
+              <div class="cert-n">TensorFlow for AI, ML & Deep Learning</div>
+              <div class="cert-b">DeepLearning.AI / Coursera · TensorFlow, neural networks</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🐳</div>
+            <div>
+              <div class="cert-n">Docker Essentials: A Developer Introduction</div>
+              <div class="cert-b">IBM / Cognitive Class · Containerization, Docker, deployment</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🗄️</div>
+            <div>
+              <div class="cert-n">SQL and Relational Databases</div>
+              <div class="cert-b">IBM / Cognitive Class · MySQL, PostgreSQL, query optimization</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🔀</div>
+            <div>
+              <div class="cert-n">Git & GitHub Fundamentals</div>
+              <div class="cert-b">GitHub / Microsoft Learn · Version control, branching, CI/CD basics</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">📝</div>
+            <div>
+              <div class="cert-n">JavaScript Algorithms and Data Structures</div>
+              <div class="cert-b">freeCodeCamp · ES6, OOP, functional programming</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">🎨</div>
+            <div>
+              <div class="cert-n">Responsive Web Design</div>
+              <div class="cert-b">freeCodeCamp · HTML5, CSS3, Flexbox, accessibility</div>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-ico">📡</div>
+            <div>
+              <div class="cert-n">Next Generation Data Networking</div>
+              <div class="cert-b">BSNL · Telecom infrastructure & data transmission protocols</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div><!-- /main -->
+  <footer-page>Senthil Nayagan · Naukri Profile · <a href="../index.html"
+      style="color:var(--nk);text-decoration:none;">← Back to Portfolio Hub</a></footer-page>
+</body>
+
+</html>

@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senthil Nayagan — GitHub Profile</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --s1: #161b22;
+      --s2: #1c2230;
+      --card: #1a2030;
+      --border: #21262d;
+      --border2: #2d3748;
+      --green: #39d353;
+      --green2: #26a641;
+      --green3: #006d32;
+      --green4: #0e4429;
+      --teal: #58d9f0;
+      --amber: #f0a020;
+      --coral: #f85149;
+      --purple: #bc8cff;
+      --blue: #58a6ff;
+      --text: #e6edf3;
+      --text2: #8b949e;
+      --muted: #484f58;
+      --dim: #30363d;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 10% 10%, rgba(57, 211, 83, 0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* NAV */
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: rgba(13, 17, 23, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border2);
+      background: var(--s1);
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--green);
+      border-color: rgba(57, 211, 83, 0.4);
+    }
+
+    .nav-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(57, 211, 83, 0.1);
+      border: 1px solid rgba(57, 211, 83, 0.25);
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--green);
+    }
+
+    /* HERO TERMINAL */
+    .hero {
+      background: linear-gradient(160deg, #0d1117 0%, #0d1f10 50%, #0d1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(57, 211, 83, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 211, 83, 0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -80px;
+      left: -80px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(57, 211, 83, 0.07) 0%, transparent 70%);
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* Terminal */
+    .terminal {
+      flex: 1;
+      background: #0d1117;
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(57, 211, 83, 0.08);
+    }
+
+    .term-bar {
+      background: var(--s1);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .dr {
+      background: #ff5f57;
+    }
+
+    .dy {
+      background: #febc2e;
+    }
+
+    .dg {
+      background: #28c840;
+    }
+
+    .term-label {
+      margin: 0 auto;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+    }
+
+    .term-body {
+      padding: 24px;
+    }
+
+    .tl {
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      line-height: 2.1;
+    }
+
+    .tp {
+      color: var(--green);
+    }
+
+    .tc {
+      color: var(--teal);
+    }
+
+    .ti {
+      color: var(--text);
+      padding-left: 20px;
+      display: block;
+    }
+
+    .th {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .td {
+      color: var(--text2);
+    }
+
+    .tb {
+      height: 6px;
+      display: block;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 9px;
+      height: 16px;
+      background: var(--green);
+      animation: blink 1.2s step-end infinite;
+      vertical-align: middle;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0
+      }
+    }
+
+    /* Right stat pills */
+    .hero-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .stat-pill {
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 12px 20px;
+      text-align: right;
+    }
+
+    .sp-n {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: var(--green);
+      line-height: 1;
+    }
+
+    .sp-l {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Contrib mini */
+    .contrib-mini {
+      display: flex;
+      gap: 3px;
+      flex-wrap: wrap;
+      max-width: 200px;
+      margin-top: 10px;
+    }
+
+    .cc {
+      width: 11px;
+      height: 11px;
+      border-radius: 2px;
+      background: var(--green4);
+    }
+
+    .cc.l1 {
+      background: var(--green3);
+    }
+
+    .cc.l2 {
+      background: var(--green2);
+    }
+
+    .cc.l3 {
+      background: var(--green);
+    }
+
+    /* MAIN */
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* SECTION */
+    .sec {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+      margin-bottom: 24px;
+      overflow: hidden;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .sec:nth-child(1) {
+      animation-delay: .05s
+    }
+
+    .sec:nth-child(2) {
+      animation-delay: .1s
+    }
+
+    .sec:nth-child(3) {
+      animation-delay: .15s
+    }
+
+    .sec:nth-child(4) {
+      animation-delay: .2s
+    }
+
+    .sec:nth-child(5) {
+      animation-delay: .25s
+    }
+
+    .sec:nth-child(6) {
+      animation-delay: .3s
+    }
+
+    .sec:nth-child(7) {
+      animation-delay: .35s
+    }
+
+    .sec:nth-child(8) {
+      animation-delay: .4s
+    }
+
+    .sec-head {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.015);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sec-ico {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .ic-g {
+      background: rgba(57, 211, 83, 0.12);
+    }
+
+    .ic-t {
+      background: rgba(88, 214, 240, 0.1);
+    }
+
+    .ic-a {
+      background: rgba(240, 160, 32, 0.1);
+    }
+
+    .ic-b {
+      background: rgba(88, 166, 255, 0.1);
+    }
+
+    .ic-p {
+      background: rgba(188, 140, 255, 0.1);
+    }
+
+    .sec-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .sec-sub {
+      font-size: 12px;
+      color: var(--text2);
+      margin-top: 1px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .sec-body {
+      padding: 28px;
+    }
+
+    .fl {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .fl span {
+      color: var(--green);
+    }
+
+    .fl::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .field {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    /* Bio fields grid */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media(max-width:560px) {
+      .bio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bio-card {
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .bio-lbl {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .bio-val {
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    /* README preview */
+    .readme-preview {
+      background: var(--bg);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .readme-bar {
+      background: var(--s1);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .readme-fname {
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+    }
+
+    .readme-body {
+      padding: 24px;
+      font-family: 'Fira Code', monospace;
+      font-size: 13px;
+      line-height: 1.9;
+      white-space: pre-line;
+      color: var(--text);
+    }
+
+    .rh1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 1px;
+      color: var(--green);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .rh2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: var(--teal);
+      margin: 16px 0 6px;
+      display: block;
+    }
+
+    .rbadge {
+      display: inline-block;
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 3px 8px;
+      font-size: 11px;
+      color: var(--text2);
+      margin: 2px;
+    }
+
+    .rbadge.py {
+      border-color: rgba(57, 113, 183, 0.5);
+      color: #79a8e8;
+    }
+
+    .rbadge.react {
+      border-color: rgba(97, 218, 251, 0.4);
+      color: #61dafb;
+    }
+
+    .rbadge.django {
+      border-color: rgba(9, 46, 32, 0.8);
+      background: rgba(9, 46, 32, 0.4);
+      color: #2ea874;
+    }
+
+    .rbadge.node {
+      border-color: rgba(67, 133, 61, 0.5);
+      color: #4ade80;
+    }
+
+    .rbadge.tf {
+      border-color: rgba(255, 111, 0, 0.4);
+      color: #f0a020;
+    }
+
+    .rbadge.docker {
+      border-color: rgba(13, 183, 237, 0.4);
+      color: #38bdf8;
+    }
+
+    /* Repo cards */
+    .repo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media(max-width:600px) {
+      .repo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .repo-card {
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s;
+    }
+
+    .repo-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), var(--teal));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+
+    .repo-card:hover {
+      border-color: rgba(57, 211, 83, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .repo-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .pin-badge {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: rgba(57, 211, 83, 0.12);
+      border: 1px solid rgba(57, 211, 83, 0.3);
+      color: var(--green);
+      font-family: 'Fira Code', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .repo-name {
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .repo-desc {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .repo-meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .repo-m {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--text2);
+    }
+
+    .ldot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .repo-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .rtag {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .rtag.g {
+      border-color: rgba(57, 211, 83, 0.3);
+      color: var(--green);
+      background: rgba(57, 211, 83, 0.06);
+    }
+
+    .rtag.t {
+      border-color: rgba(88, 214, 240, 0.3);
+      color: var(--teal);
+      background: rgba(88, 214, 240, 0.06);
+    }
+
+    .rtag.a {
+      border-color: rgba(240, 160, 32, 0.3);
+      color: var(--amber);
+      background: rgba(240, 160, 32, 0.06);
+    }
+
+    .repo-score {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .score-bar-w {
+      flex: 1;
+    }
+
+    .score-bar {
+      height: 4px;
+      background: var(--border2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .score-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--green2), var(--green));
+      animation: grow 1.2s ease both;
+    }
+
+    @keyframes grow {
+      from {
+        width: 0 !important
+      }
+    }
+
+    .score-v {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--green);
+    }
+
+    .score-l {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    /* Tech grid */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .tech-tile {
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .tech-tile:hover {
+      border-color: rgba(57, 211, 83, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .te {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .tn {
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      color: var(--text);
+    }
+
+    .tl2 {
+      font-size: 10px;
+      color: var(--text2);
+      margin-top: 3px;
+    }
+
+    /* Language bar */
+    .lang-bar {
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      margin-bottom: 12px;
+    }
+
+    .lang-seg {
+      height: 100%;
+    }
+
+    .lang-legend {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .lang-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text2);
+    }
+
+    .ld {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* Tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      color: var(--text2);
+      font-family: 'Fira Code', monospace;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+
+    .tag:hover {
+      border-color: rgba(57, 211, 83, 0.4);
+      color: var(--green);
+    }
+
+    .tag.g {
+      background: rgba(57, 211, 83, 0.08);
+      border-color: rgba(57, 211, 83, 0.25);
+      color: var(--green);
+    }
+
+    .tag.t {
+      background: rgba(88, 214, 240, 0.08);
+      border-color: rgba(88, 214, 240, 0.25);
+      color: var(--teal);
+    }
+
+    .tag.a {
+      background: rgba(240, 160, 32, 0.08);
+      border-color: rgba(240, 160, 32, 0.25);
+      color: var(--amber);
+    }
+
+    /* Cert badges */
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cert-badge {
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cert-badge:hover {
+      border-color: rgba(57, 211, 83, 0.35);
+    }
+
+    .cert-ico {
+      font-size: 20px;
+    }
+
+    .cert-name {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .cert-by {
+      font-family: 'Fira Code', monospace;
+      font-size: 10px;
+      color: var(--text2);
+    }
+
+    /* Steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--s1);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      align-items: flex-start;
+      transition: border-color 0.2s;
+    }
+
+    .step:hover {
+      border-color: rgba(57, 211, 83, 0.35);
+    }
+
+    .step-n {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--green2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .step-c h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .step-c p {
+      font-size: 13px;
+      color: var(--text2);
+    }
+
+    .code {
+      background: var(--bg);
+      padding: 1px 7px;
+      border-radius: 4px;
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--green);
+    }
+
+    /* Contrib full grid */
+    .contrib-full {
+      display: grid;
+      grid-template-columns: repeat(52, 1fr);
+      gap: 3px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+
+    .cfc {
+      width: 100%;
+      padding-top: 100%;
+      border-radius: 2px;
+      background: var(--green4);
+    }
+
+    .cfc.l1 {
+      background: var(--green3);
+    }
+
+    .cfc.l2 {
+      background: var(--green2);
+    }
+
+    .cfc.l3 {
+      background: var(--green);
+    }
+
+    .cfc.l4 {
+      background: #7ee787;
+    }
+
+    footer-page {
+      display: block;
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border2);
+      border-radius: 2px;
+    }
+
+    @media(max-width:640px) {
+      .hero {
+        padding: 28px 16px;
+      }
+
+      .hero-inner {
+        flex-direction: column;
+      }
+
+      .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .main {
+        padding: 24px 14px 60px;
+      }
+
+      .sec-body {
+        padding: 18px;
+      }
+
+      .topnav {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPNAV -->
+  <nav class="topnav">
+    <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+    <span style="font-family:'Fira Code',monospace;font-size:12px;color:var(--muted);">GitHub Profile</span>
+    <div class="nav-badge">⬡ github.com/SenthilL13</div>
+  </nav>
+
+  <!-- HERO TERMINAL -->
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="terminal">
+        <div class="term-bar">
+          <div class="dots">
+            <div class="dot dr"></div>
+            <div class="dot dy"></div>
+            <div class="dot dg"></div>
+          </div>
+          <div class="term-label">senthil@github ~ zsh</div>
+        </div>
+        <div class="term-body">
+          <div class="tl"><span class="tp">senthil@github</span><span class="td">:~$ </span><span class="tc">gh profile
+              --user SenthilL13</span></div>
+          <span class="tb"></span>
+          <div class="tl"><span class="ti"><span class="th">👤 Name:</span> <span class="td">Senthil
+                Nayagan</span></span></div>
+          <div class="tl"><span class="ti"><span class="th">🔗 URL:</span> <span
+                style="color:#58a6ff;">github.com/SenthilL13</span></span></div>
+          <div class="tl"><span class="ti"><span class="th">📍 Location:</span> <span class="td">Coimbatore, Tamil Nadu,
+                India</span></span></div>
+          <div class="tl"><span class="ti"><span class="th">💼 Role:</span> <span class="td">Full Stack
+                Developer</span></span></div>
+          <div class="tl"><span class="ti"><span class="th">📦 Repos:</span> <span class="th">33+</span> <span
+                class="td">public repositories</span></span></div>
+          <div class="tl"><span class="ti"><span class="th">🌐 Portfolio:</span> <span
+                style="color:#58d9f0;">senthilh5.netlify.app</span></span></div>
+          <span class="tb"></span>
+          <div class="tl"><span class="tp">senthil@github</span><span class="td">:~$ </span><span class="tc">cat
+              stack.txt</span></div>
+          <span class="tb"></span>
+          <div class="tl"><span class="ti"><span class="th">Backend:</span> Python · Django · FastAPI · Node.js ·
+              Flask</span></div>
+          <div class="tl"><span class="ti"><span class="th">Frontend:</span> React · Next.js · HTML5 · CSS3</span></div>
+          <div class="tl"><span class="ti"><span class="th">Database:</span> MySQL · PostgreSQL · MongoDB ·
+              Firebase</span></div>
+          <div class="tl"><span class="ti"><span class="th">AI/ML:</span> TensorFlow · PyTorch · OpenCV · NLP</span>
+          </div>
+          <div class="tl"><span class="ti"><span class="th">DevOps:</span> Docker · Git · Linux · Netlify</span></div>
+          <span class="tb"></span>
+          <div class="tl"><span class="tp">senthil@github</span><span class="td">:~$ </span><span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <div class="sp-n">33+</div>
+          <div class="sp-l">Repositories</div>
+        </div>
+        <div class="stat-pill">
+          <div class="sp-n">6</div>
+          <div class="sp-l">Pinned Repos</div>
+        </div>
+        <div class="stat-pill">
+          <div class="sp-n">11</div>
+          <div class="sp-l">Certifications</div>
+        </div>
+        <div class="stat-pill">
+          <div class="sp-n">2020</div>
+          <div class="sp-l">Coding Since</div>
+        </div>
+        <div class="contrib-mini">
+          <div class="cc"></div>
+          <div class="cc l1"></div>
+          <div class="cc l2"></div>
+          <div class="cc"></div>
+          <div class="cc l3"></div>
+          <div class="cc l1"></div>
+          <div class="cc"></div>
+          <div class="cc l2"></div>
+          <div class="cc l3"></div>
+          <div class="cc l1"></div>
+          <div class="cc"></div>
+          <div class="cc l2"></div>
+          <div class="cc l3"></div>
+          <div class="cc l1"></div>
+          <div class="cc l3"></div>
+          <div class="cc"></div>
+          <div class="cc l2"></div>
+          <div class="cc l1"></div>
+          <div class="cc l3"></div>
+          <div class="cc"></div>
+          <div class="cc l2"></div>
+          <div class="cc l1"></div>
+          <div class="cc l3"></div>
+          <div class="cc l2"></div>
+          <div class="cc"></div>
+          <div class="cc l3"></div>
+          <div class="cc l1"></div>
+          <div class="cc l2"></div>
+          <div class="cc l3"></div>
+          <div class="cc l1"></div>
+          <div class="cc"></div>
+          <div class="cc l2"></div>
+          <div class="cc l3"></div>
+          <div class="cc l1"></div>
+          <div class="cc l2"></div>
+          <div class="cc"></div>
+          <div class="cc l3"></div>
+          <div class="cc l2"></div>
+          <div class="cc l1"></div>
+          <div class="cc"></div>
+          <div class="cc l3"></div>
+          <div class="cc l2"></div>
+          <div class="cc l1"></div>
+          <div class="cc l3"></div>
+          <div class="cc"></div>
+          <div class="cc l2"></div>
+          <div class="cc l1"></div>
+          <div class="cc l3"></div>
+          <div class="cc l2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- 1. BIO FIELDS -->
+    <div class="sec">
+      <div class="sec-head">
+        <div class="sec-ico ic-g">👤</div>
+        <div>
+          <div class="sec-title">Profile Bio & Fields</div>
+          <div class="sec-sub">Edit Profile → fill every field</div>
+        </div>
+      </div>
+      <div class="sec-body">
+        <div class="field">
+          <div class="fl"><span>#</span> All Profile Fields</div>
+          <div class="bio-grid">
+            <div class="bio-card">
+              <div class="bio-lbl">Display Name</div>
+              <div class="bio-val">Senthil Nayagan</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">Username</div>
+              <div class="bio-val" style="color:var(--blue);font-family:'Fira Code',monospace;">@SenthilL13</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">Bio (160 chars)</div>
+              <div class="bio-val" style="color:var(--green);font-family:'Fira Code',monospace;font-size:13px;">Full
+                Stack Dev 🚀 | Python · Django · React · Node.js | 33+ repos | AI/ML Enthusiast | Open to Product Roles
+                💼</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">Company</div>
+              <div class="bio-val">@TechorcSoftware</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">Location</div>
+              <div class="bio-val">Coimbatore, Tamil Nadu, India</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">Website</div>
+              <div class="bio-val" style="color:var(--teal);">https://senthilh5.netlify.app/</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">LinkedIn</div>
+              <div class="bio-val" style="color:var(--blue);">linkedin.com/in/senthil-nayagan-976b58277</div>
+            </div>
+            <div class="bio-card">
+              <div class="bio-lbl">Pronouns (optional)</div>
+              <div class="bio-val" style="color:var(--text2);">he/him</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- 3. PINNED REPOS -->
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-ico ic-g">📌</div>
+          <div>
+            <div class="sec-title">6 Repos to Pin</div>
+            <div class="sec-sub">Profile → Customize your pins → select these 6 in order</div>
+          </div>
+        </div>
+        <div class="sec-body">
+          <div class="repo-grid">
+
+            <div class="repo-card">
+              <div class="pin-badge">📌 PIN #1</div>
+              <div class="repo-name">🛰️ gps-tracking-system</div>
+              <div class="repo-desc">Real-time GPS vehicle tracking — sub-2s latency, route history, fleet dashboard
+                monitoring 20+ vehicles live.</div>
+              <div class="repo-meta">
+                <div class="repo-m">
+                  <div class="ldot" style="background:#61dafb;"></div>React/Next.js
+                </div>
+                <div class="repo-m">🔥 Firebase</div>
+              </div>
+              <div class="repo-tags"><span class="rtag g">live</span><span class="rtag t">real-time</span><span
+                  class="rtag">fullstack</span><span class="rtag">gps</span></div>
+              <div class="repo-score">
+                <span class="score-l">Impact</span>
+                <div class="score-bar-w">
+                  <div class="score-bar">
+                    <div class="score-fill" style="width:95%;"></div>
+                  </div>
+                </div>
+                <span class="score-v">95/100</span>
+              </div>
+            </div>
+
+            <div class="repo-card">
+              <div class="pin-badge">📌 PIN #2</div>
+              <div class="repo-name">🚗 road-vehicle-analysis</div>
+              <div class="repo-desc">Computer vision pipeline: 30 FPS, multi-class vehicle detection, speed estimation &
+                traffic classification.</div>
+              <div class="repo-meta">
+                <div class="repo-m">
+                  <div class="ldot" style="background:#3776ab;"></div>Python
+                </div>
+                <div class="repo-m">🧠 TensorFlow</div>
+              </div>
+              <div class="repo-tags"><span class="rtag a">ai-ml</span><span class="rtag t">computer-vision</span><span
+                  class="rtag">deep-learning</span></div>
+              <div class="repo-score">
+                <span class="score-l">Impact</span>
+                <div class="score-bar-w">
+                  <div class="score-bar">
+                    <div class="score-fill" style="width:92%;"></div>
+                  </div>
+                </div>
+                <span class="score-v">92/100</span>
+              </div>
+            </div>
+
+            <div class="repo-card">
+              <div class="pin-badge">📌 PIN #3</div>
+              <div class="repo-name">💬 hate-speech-nlp</div>
+              <div class="repo-desc">PyTorch NLP classifier, 89% F1-score. Flask REST API handling 100+ inference
+                requests
+                per minute.</div>
+              <div class="repo-meta">
+                <div class="repo-m">
+                  <div class="ldot" style="background:#3776ab;"></div>Python
+                </div>
+                <div class="repo-m">🔥 PyTorch</div>
+              </div>
+              <div class="repo-tags"><span class="rtag a">nlp</span><span class="rtag a">pytorch</span><span
+                  class="rtag">rest-api</span></div>
+              <div class="repo-score">
+                <span class="score-l">Impact</span>
+                <div class="score-bar-w">
+                  <div class="score-bar">
+                    <div class="score-fill" style="width:89%;"></div>
+                  </div>
+                </div>
+                <span class="score-v">89/100</span>
+              </div>
+            </div>
+
+            <div class="repo-card">
+              <div class="pin-badge">📌 PIN #4</div>
+              <div class="repo-name">🎓 student-study-portal</div>
+              <div class="repo-desc">3-version academic platform — MySQL → MongoDB migration. RBAC, MVC, serves 100+
+                users.</div>
+              <div class="repo-meta">
+                <div class="repo-m">
+                  <div class="ldot" style="background:#3776ab;"></div>Django
+                </div>
+                <div class="repo-m">🗄️ MySQL+MongoDB</div>
+              </div>
+              <div class="repo-tags"><span class="rtag g">django</span><span class="rtag">fullstack</span><span
+                  class="rtag">mysql</span></div>
+              <div class="repo-score">
+                <span class="score-l">Impact</span>
+                <div class="score-bar-w">
+                  <div class="score-bar">
+                    <div class="score-fill" style="width:85%;"></div>
+                  </div>
+                </div>
+                <span class="score-v">85/100</span>
+              </div>
+            </div>
+
+            <div class="repo-card">
+              <div class="pin-badge">📌 PIN #5</div>
+              <div class="repo-name">🔐 auth-login-system</div>
+              <div class="repo-desc">Reusable secure auth module: bcrypt, session management, input validation —
+                integrated across 3+ projects.</div>
+              <div class="repo-meta">
+                <div class="repo-m">
+                  <div class="ldot" style="background:#f7df1e;"></div>JavaScript
+                </div>
+                <div class="repo-m">🔐 bcrypt</div>
+              </div>
+              <div class="repo-tags"><span class="rtag t">security</span><span class="rtag">authentication</span></div>
+              <div class="repo-score">
+                <span class="score-l">Impact</span>
+                <div class="score-bar-w">
+                  <div class="score-bar">
+                    <div class="score-fill" style="width:78%;"></div>
+                  </div>
+                </div>
+                <span class="score-v">78/100</span>
+              </div>
+            </div>
+
+            <div class="repo-card">
+              <div class="pin-badge">📌 PIN #6</div>
+              <div class="repo-name">📊 student-db-management</div>
+              <div class="repo-desc">CRUD web app managing 500+ student records, normalized SQL schema, optimized
+                queries
+                & live form validation.</div>
+              <div class="repo-meta">
+                <div class="repo-m">
+                  <div class="ldot" style="background:#f7df1e;"></div>JavaScript
+                </div>
+                <div class="repo-m">🗄️ SQL</div>
+              </div>
+              <div class="repo-tags"><span class="rtag">crud</span><span class="rtag">sql</span><span
+                  class="rtag">web-app</span></div>
+              <div class="repo-score">
+                <span class="score-l">Impact</span>
+                <div class="score-bar-w">
+                  <div class="score-bar">
+                    <div class="score-fill" style="width:72%;"></div>
+                  </div>
+                </div>
+                <span class="score-v">72/100</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. TECH STACK -->
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-ico ic-t">💻</div>
+          <div>
+            <div class="sec-title">Full Tech Stack</div>
+            <div class="sec-sub">Across 33+ repositories and 4+ years of coding</div>
+          </div>
+        </div>
+        <div class="sec-body">
+          <div class="field">
+            <div class="fl"><span>#</span> Language Distribution</div>
+            <div class="lang-bar">
+              <div class="lang-seg" style="background:#3776ab;flex:35;"></div>
+              <div class="lang-seg" style="background:#f7df1e;flex:25;"></div>
+              <div class="lang-seg" style="background:#e34c26;flex:15;"></div>
+              <div class="lang-seg" style="background:#1572b6;flex:10;"></div>
+              <div class="lang-seg" style="background:#b07219;flex:7;"></div>
+              <div class="lang-seg" style="background:#04D361;flex:3;"></div>
+              <div class="lang-seg" style="background:#555;flex:5;"></div>
+            </div>
+            <div class="lang-legend">
+              <div class="lang-item">
+                <div class="ld" style="background:#3776ab;"></div>Python 35%
+              </div>
+              <div class="lang-item">
+                <div class="ld" style="background:#f7df1e;"></div>JavaScript 25%
+              </div>
+              <div class="lang-item">
+                <div class="ld" style="background:#e34c26;"></div>HTML 15%
+              </div>
+              <div class="lang-item">
+                <div class="ld" style="background:#1572b6;"></div>CSS 10%
+              </div>
+              <div class="lang-item">
+                <div class="ld" style="background:#b07219;"></div>Java 7%
+              </div>
+              <div class="lang-item">
+                <div class="ld" style="background:#04D361;"></div>Dart 3%
+              </div>
+              <div class="lang-item">
+                <div class="ld" style="background:#555;"></div>Other 5%
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <div class="fl"><span>#</span> All Technologies</div>
+            <div class="tech-grid">
+              <div class="tech-tile">
+                <div class="te">🐍</div>
+                <div class="tn">Python</div>
+                <div class="tl2">Primary</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">⚛️</div>
+                <div class="tn">React.js</div>
+                <div class="tl2">Frontend</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🟢</div>
+                <div class="tn">Django</div>
+                <div class="tl2">Backend</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🚀</div>
+                <div class="tn">Node.js</div>
+                <div class="tl2">Backend</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">⚡</div>
+                <div class="tn">FastAPI</div>
+                <div class="tl2">REST APIs</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🗄️</div>
+                <div class="tn">MySQL</div>
+                <div class="tl2">Database</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🍃</div>
+                <div class="tn">MongoDB</div>
+                <div class="tl2">NoSQL</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🐳</div>
+                <div class="tn">Docker</div>
+                <div class="tl2">DevOps</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🧠</div>
+                <div class="tn">TensorFlow</div>
+                <div class="tl2">AI/ML</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">👁️</div>
+                <div class="tn">OpenCV</div>
+                <div class="tl2">CV</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🔥</div>
+                <div class="tn">PyTorch</div>
+                <div class="tl2">Deep Learning</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🔮</div>
+                <div class="tn">Next.js</div>
+                <div class="tl2">Full Stack</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">📱</div>
+                <div class="tn">Flutter</div>
+                <div class="tl2">Mobile</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🐘</div>
+                <div class="tn">PostgreSQL</div>
+                <div class="tl2">Database</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🔶</div>
+                <div class="tn">Firebase</div>
+                <div class="tl2">BaaS</div>
+              </div>
+              <div class="tech-tile">
+                <div class="te">🐙</div>
+                <div class="tn">Git/GitHub</div>
+                <div class="tl2">Version Control</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. CONTRIBUTION GRAPH -->
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-ico ic-g">📈</div>
+          <div>
+            <div class="sec-title">Contribution Strategy</div>
+            <div class="sec-sub">Keep the graph green — consistency signals passion</div>
+          </div>
+        </div>
+        <div class="sec-body">
+          <div class="field">
+            <div class="fl"><span>#</span> Contribution Calendar</div>
+            <div class="contrib-full" id="contribGrid"></div>
+          </div>
+          <div class="field">
+            <div class="fl"><span>#</span> Topics to Add to Every Repo</div>
+            <div class="tags">
+              <span class="tag g">python</span><span class="tag g">django</span><span class="tag g">react</span>
+              <span class="tag g">nodejs</span><span class="tag g">fastapi</span>
+              <span class="tag t">machine-learning</span><span class="tag t">deep-learning</span>
+              <span class="tag t">computer-vision</span><span class="tag t">nlp</span>
+              <span class="tag t">tensorflow</span><span class="tag t">pytorch</span>
+              <span class="tag a">fullstack</span><span class="tag a">rest-api</span>
+              <span class="tag a">docker</span><span class="tag a">firebase</span>
+              <span class="tag">mysql</span><span class="tag">mongodb</span>
+              <span class="tag">web-development</span><span class="tag">open-source</span><span
+                class="tag">portfolio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. CERTIFICATIONS -->
+      <div class="sec">
+        <div class="sec-head">
+          <div class="sec-ico ic-p">🏅</div>
+          <div>
+            <div class="sec-title">Certifications</div>
+            <div class="sec-sub">11 certs from Anthropic, IBM, Meta, Michigan & DeepLearning.AI</div>
+          </div>
+        </div>
+        <div class="sec-body">
+          <div class="cert-grid">
+            <div class="cert-badge">
+              <div class="cert-ico">🤖</div>
+              <div>
+                <div class="cert-name">Claude Code in Action</div>
+                <div class="cert-by">Anthropic</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🐍</div>
+              <div>
+                <div class="cert-name">Python for Everybody</div>
+                <div class="cert-by">Univ. of Michigan / Coursera</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">⚛️</div>
+              <div>
+                <div class="cert-name">React & Front-End Development</div>
+                <div class="cert-by">Meta / Coursera</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🌐</div>
+              <div>
+                <div class="cert-name">Django + SQL & Databases</div>
+                <div class="cert-by">IBM / Coursera</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🧠</div>
+              <div>
+                <div class="cert-name">TensorFlow for AI/ML/DL</div>
+                <div class="cert-by">DeepLearning.AI / Coursera</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🐳</div>
+              <div>
+                <div class="cert-name">Docker Essentials</div>
+                <div class="cert-by">IBM / Cognitive Class</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🗄️</div>
+              <div>
+                <div class="cert-name">SQL & Relational Databases</div>
+                <div class="cert-by">IBM / Cognitive Class</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🔀</div>
+              <div>
+                <div class="cert-name">Git & GitHub Fundamentals</div>
+                <div class="cert-by">GitHub / Microsoft Learn</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">📝</div>
+              <div>
+                <div class="cert-name">JS Algorithms & Data Structures</div>
+                <div class="cert-by">freeCodeCamp</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">🎨</div>
+              <div>
+                <div class="cert-name">Responsive Web Design</div>
+                <div class="cert-by">freeCodeCamp</div>
+              </div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-ico">📡</div>
+              <div>
+                <div class="cert-name">Next Gen Data Networking</div>
+                <div class="cert-by">BSNL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div><!-- /main -->
+    <footer-page>Senthil Nayagan · GitHub Profile · <a href="../index.html"
+        style="color:var(--green);text-decoration:none;">← Back to Portfolio Hub</a></footer-page>
+
+    <script>
+      const grid = document.getElementById('contribGrid');
+      const lvls = [0, 0, 1, 0, 2, 1, 0, 3, 0, 1, 2, 0, 3, 1, 0, 2, 3, 1, 4, 0, 2, 1, 0, 3, 2, 1, 0, 3, 2, 1, 4, 2, 0, 3, 1, 0, 2, 1, 3, 0, 2, 4, 1, 0, 3, 2, 1, 4, 2, 0, 1, 3, 2];
+      for (let w = 0; w < 52; w++) { for (let d = 0; d < 7; d++) { const i = (w * 7 + d) % lvls.length; const c = document.createElement('div'); c.className = 'cfc' + (lvls[i] > 0 ? ' l' + lvls[i] : ''); grid.appendChild(c); } }
+    </script>
+</body>
+
+</html>
